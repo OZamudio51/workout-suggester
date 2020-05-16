@@ -32,7 +32,7 @@ class BodyPartSelector extends React.Component {
             <div>
         <label htmlFor='Workout'>Select a bodypart: </label>
           <select onChange={this.handleBodypartSubmit}>
-            <option disabled value>Select a bodypart</option>
+            <option disabled selected>Select a bodypart</option>
             <option value='chest'>Chest</option>
             <option value='legs'>Legs</option>
             <option value='back'>Back</option>

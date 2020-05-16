@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rate } from 'antd';
 import 'antd/dist/antd.css';
+import Workout from './Workout'
 
 class WorkoutList extends React.Component {
   static defaultProps = {
@@ -20,7 +21,7 @@ class WorkoutList extends React.Component {
     // console.log(bodypart)
         return (
         <section>
-        <h1>hello</h1>
+        <Workout />
         </section>
         )
     };

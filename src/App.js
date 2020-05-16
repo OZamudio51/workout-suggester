@@ -127,22 +127,22 @@ class App extends React.Component {
     }
   }
 
-  renderRoutes() {
-    return (
-        <>
-            {/* {["/workout", '/workout-comparison'].map(path => (
-                <Route
-                    exact
-                    key={path}
-                    path={path}
-                    component={App}
-                />
-            ))} */}
-            <Route exact path="/workout/:bodypart" component={WorkoutList} />
-            <Route path='/workout-comparison' component={WorkoutComparison} />
-        </>
-    );
-}
+//   renderRoutes() {
+//     return (
+//         <>
+//             {/* {["/workout", '/workout-comparison'].map(path => (
+//                 <Route
+//                     exact
+//                     key={path}
+//                     path={path}
+//                     component={App}
+//                 />
+//             ))} */}
+//             <Route exact path="/workout/:bodypart" component={WorkoutList} />
+//             <Route path='/workout-comparison' component={WorkoutComparison} />
+//         </>
+//     );
+// }
 
   updateBodypart = (bodypart) => {
     console.log(bodypart)
@@ -164,13 +164,13 @@ class App extends React.Component {
 
   render() {
 
-    if (this.state.toWorkout === true) {
-      return <Redirect to={`/workout/${this.state.bodypart}`} />
-    }
+    // if (this.state.toWorkout === true) {
+    //   return <Redirect to={`/workout/${this.state.bodypart}`} />
+    // }
 
     return (
       <main className='App'>
-        {this.renderRoutes()}
+        {/* {this.renderRoutes()} */}
         <header>
           <h1>Workout Suggester</h1>
         </header>
