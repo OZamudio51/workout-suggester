@@ -24,7 +24,10 @@ class BodyPartSelector extends React.Component {
         });
 
         this.props.updateBodypart(e.target.value)
+
+        // this.props.history.push(`/${e.target.value}`);
     };
+
 
     render() {
         
