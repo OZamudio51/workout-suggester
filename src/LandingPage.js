@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Workout from './Workout';
 import BodyPartSelector from './BodyPartSelector';
-import WorkoutComparison from './WorkoutComparison';
+// import WorkoutComparison from './WorkoutComparison';
 
 
 
@@ -100,20 +100,20 @@ const workoutsList = [{
     "desc": "Description of workout here"
   }, {
     "id": 15,
-    "bodypart": "stretch/warmup", 
+    "bodypart": "stretches-warmup", 
     "name": "External Oblique Stretch",
     "video": "video of workout goes here",
     "desc": "Description of workout here"
   }, {
     "id": 16,
-    "bodypart": "stretch/warmup", 
-    "name": "Quad stretch",
+    "bodypart": "stretches-warmup", 
+    "name": "Quad stretches",
     "video": "video of workout goes here",
     "desc": "Description of workout here"
   }, {
     "id": 17,
-    "bodypart": "stretch/warmup", 
-    "name": "Chest stretch",
+    "bodypart": "stretches-warmup", 
+    "name": "Chest stretches",
     "video": "video of workout goes here",
     "desc": "Description of workout here"
   }
@@ -145,21 +145,28 @@ class LandingPage extends React.Component {
           bodypart: bodypart
         })
       };
+
+      bodypart  = this.bodypart
     
       render() {
-    
+        
+        
         return (
             <div>
             <header>
               <h1>Workout Suggester</h1>
             </header>
             <BodyPartSelector updateBodypart={this.updateBodypart} />
+
+{
+        this.state.bodypart ? 
+        this.state.workouts.map((workoutDetail, index) => {
+          return <Workout workouts={workoutDetail} key={`workout-list-key ${index}`} />
+        }) :
+        <></> 
+ }
     
-          {this.state.workouts.map((workoutDetail, index) => {
-            return <Workout workouts={workoutDetail} key={index} />
-          })}
-    
-          <WorkoutComparison />
+          {/* <WorkoutComparison /> */}
           </div>
         )
       }

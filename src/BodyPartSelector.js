@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './BodyPartSelector.css';
 
 class BodyPartSelector extends React.Component {
@@ -10,6 +11,7 @@ class BodyPartSelector extends React.Component {
         
         this.handleBodypartSubmit = this.handleBodypartSubmit.bind(this);
     };
+
 
     handleBodypartSubmit = e => {
         e.preventDefault();
@@ -25,7 +27,7 @@ class BodyPartSelector extends React.Component {
 
         this.props.updateBodypart(e.target.value)
 
-        // this.props.history.push(`/${e.target.value}`);
+        // this.props.history.push(`/workout/${e.target.value}`);
     };
 
 
@@ -50,4 +52,4 @@ class BodyPartSelector extends React.Component {
     }
 }
 
-export default BodyPartSelector;
+export default withRouter(BodyPartSelector);

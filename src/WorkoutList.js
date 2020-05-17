@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rate } from 'antd';
+// import { Rate } from 'antd';
 import 'antd/dist/antd.css';
 import Workout from './Workout'
 
@@ -14,15 +14,16 @@ class WorkoutList extends React.Component {
     const { bodypart } = this.props.match.params
     console.log(bodypart)
   };
-
+  
     render() {
       console.log(this.props);
       const { bodypart } = this.props.match.params
     console.log(bodypart)
+    const workout = this.props.WorkoutList
         return (
-        <section>
-        <Workout />
-        </section>
+        <div>
+        <Workout workout={workout}/>
+        </div>
         )
     };
 };
