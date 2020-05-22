@@ -27,7 +27,7 @@ class BodyPartSelector extends React.Component {
 
         this.props.updateBodypart(e.target.value)
 
-        // this.props.history.push(`/workout/${e.target.value}`);
+        this.props.history.push(`/workout/${e.target.value}`);
     };
 
 
@@ -35,17 +35,17 @@ class BodyPartSelector extends React.Component {
         
         return (
             <div>
-        <label htmlFor='Workout'>Select a bodypart: </label>
-          <select onChange={this.handleBodypartSubmit}>
-            <option disabled selected>Select a bodypart</option>
+        <label htmlFor='Workout'>Working on: </label>
+          <select onChange={this.handleBodypartSubmit} defaultValue='Select-a-bodypart'>
+            <option value="Select-a-bodypart" disabled>Select a bodypart</option>
             <option value='chest'>Chest</option>
             <option value='legs'>Legs</option>
+            <option value='shoulders'>Shoulders</option>
             <option value='back'>Back</option>
+            <option value='arms'>Arms</option>
             <option value='cardio'>Cardio</option>
-            <option value='stretches-warmups'>Stretches/Warmups</option>
+            <option value='stretches-warmup'>Stretches/Warmups</option>
           </select>
-          {' '}
-          {/* <button onClick={this.handleBodypartSubmit}>Go!</button> */}
         </div>
 
         )

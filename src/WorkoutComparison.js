@@ -5,7 +5,7 @@ class WorkoutComparison extends React.Component {
 
     render() {
 
-        // const { workouts } = this.props;
+        
         return (
     <div>
     <header>

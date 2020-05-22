@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rate } from 'antd';
 import 'antd/dist/antd.css';
+import ApiContext from './ApiContext';
 
 class Workout extends React.Component {
   static defaultProps = {
@@ -9,20 +10,19 @@ class Workout extends React.Component {
     }
   }
 
-  componentDidMount() {
-    
-  };
+  static contextType = ApiContext;
 
     render() {
+      console.log(this.context.workoutsList);
       console.log(this.props);
       const { workouts } = this.props;
       const { bodypart } = this.props.match.params
     console.log(bodypart)
         return (
         <section>
-          <h3>{workouts.name}</h3>
-          <div className='img-container'>{workouts.video}</div>
-          <p>{workouts.desc}</p>
+          <h3>{workouts.workout_name}</h3>
+          <div className='img-container' dangerouslySetInnerHTML={{ __html: workouts.workout_video}}></div>
+          <p>{workouts.workout_desc}</p>
           <label htmlFor='rating'>Rate this workout: </label>
           <Rate />
         </section>
