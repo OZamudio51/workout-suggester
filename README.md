@@ -10,11 +10,21 @@ Link to live app:
 An application that suggest workouts based off of bodyparts. 
 
           
+### Front-End:
+* HTML
+* CSS
+* React
+* Babel
+* JSX
+  
+### Back-End
+* Postgress
+* Express
+* Node
+* Knex
 
-
-- Technology used:
-  - HTML
-  - CSS
-  - React
-  - Babel
-  - JSX
+### Testing
+* Mocha
+* Chai
+* Chai-http
+* Jest
