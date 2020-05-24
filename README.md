@@ -3,7 +3,7 @@
 
 Link to live app: 
 
-![Workout Suggester screenshot](C:\Users\zamud\projects\workout-suggester\workout-suggester-screenshot.PNG)
+![Workout Suggester screenshot](workout-suggester-screenshot.PNG)
 
 
 
