@@ -18,7 +18,7 @@ An application that suggest workouts based off of bodyparts.
 * JSX
   
 ### Back-End
-* Postgress
+* PostgreSQL
 * Express
 * Node
 * Knex
