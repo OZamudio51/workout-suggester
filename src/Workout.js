@@ -2,7 +2,7 @@ import React from 'react';
 import { Rate } from 'antd';
 import 'antd/dist/antd.css';
 import ApiContext from './ApiContext';
-
+import './Workout.css';
 class Workout extends React.Component {
   static defaultProps = {
     match: {
@@ -13,17 +13,15 @@ class Workout extends React.Component {
   static contextType = ApiContext;
 
     render() {
-      console.log(this.context.workoutsList);
-      console.log(this.props);
       const { workouts } = this.props;
       const { bodypart } = this.props.match.params
     console.log(bodypart)
         return (
         <section>
-          <h3>{workouts.workout_name}</h3>
+          <h2 style={{color: "white"}}>{workouts.workout_name}</h2>
           <div className='img-container' dangerouslySetInnerHTML={{ __html: workouts.workout_video}}></div>
-          <p>{workouts.workout_desc}</p>
-          <label htmlFor='rating'>Rate this workout: </label>
+          <div><p style={{color: "white"}}>{workouts.workout_desc}</p></div>
+          <label htmlFor='rating' style={{color: "white"}}>Rate this workout: </label>
           <Rate />
         </section>
         )

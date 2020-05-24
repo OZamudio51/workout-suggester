@@ -34,9 +34,10 @@ class BodyPartSelector extends React.Component {
     render() {
         
         return (
-            <div>
-        <label htmlFor='Workout'>Working on: </label>
-          <select onChange={this.handleBodypartSubmit} defaultValue='Select-a-bodypart'>
+        <div>
+         <form htmlFor='Workout'>
+         <label htmlFor='Workout' style={{color: "white"}}>Working on: </label>
+          <select title='Workout' className='body-selection' onChange={this.handleBodypartSubmit} defaultValue='Select-a-bodypart'>
             <option value="Select-a-bodypart" disabled>Select a bodypart</option>
             <option value='chest'>Chest</option>
             <option value='legs'>Legs</option>
@@ -46,6 +47,7 @@ class BodyPartSelector extends React.Component {
             <option value='cardio'>Cardio</option>
             <option value='stretches-warmup'>Stretches/Warmups</option>
           </select>
+         </form>
         </div>
 
         )

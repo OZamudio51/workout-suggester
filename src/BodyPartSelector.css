@@ -1,4 +1,32 @@
 form {
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 20px;
 }
+
+.body-selection {
+	-webkit-animation: body-selection 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: body-selection 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-radius: 10px;
+}
+
+  @-webkit-keyframes body-selection {
+    0% {
+       -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+              box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    } 
+    100% {
+      -webkit-box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.75);
+              box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.75);
+    }
+  }
+  @keyframes body-selection {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+              box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.75);
+              box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.75);
+    }
+  }
