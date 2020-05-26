@@ -30,7 +30,7 @@ const mockWorkouts = [
       },
 ]
 
-describe('Workout component', () => {
+describe('LandingPage component', () => {
     test('renders', () => {
         const wrapper = shallow(<LandingPage workouts={mockWorkouts}/>);
 

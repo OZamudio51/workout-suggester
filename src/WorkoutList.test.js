@@ -30,7 +30,7 @@ const mockWorkouts = [
       },
 ]
 
-describe('Workout component', () => {
+describe('WorkoutList component', () => {
     test('renders', () => {
         const wrapper = shallow(<WorkoutList workouts={mockWorkouts}/>);
 
