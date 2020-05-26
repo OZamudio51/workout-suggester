@@ -1,20 +1,30 @@
 # Workout Suggester
 
 
-Link to live app: 
+Link to live app: https://workout-suggester-ten-gilt.now.sh/
 
-![Workout Suggester screenshot](C:\Users\zamud\projects\workout-suggester\workout-suggester-screenshot.PNG)
+![Workout Suggester screenshot](workout-suggester-screenshot.PNG)
 
 
 
 An application that suggest workouts based off of bodyparts. 
 
           
+### Front-End:
+* HTML
+* CSS
+* React
+* Babel
+* JSX
+  
+### Back-End
+* PostgreSQL
+* Express
+* Node
+* Knex
 
-
-- Technology used:
-  - HTML
-  - CSS
-  - React
-  - Babel
-  - JSX
+### Testing
+* Mocha
+* Chai
+* Chai-http
+* Jest
