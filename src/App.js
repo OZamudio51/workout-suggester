@@ -22,9 +22,9 @@ class App extends React.Component {
     super(props)
     this.state = {
       workoutsList: []
-    }
+    };
 
-  }
+  };
 
   componentDidMount() {
     this.fetchWorkouts()
@@ -35,9 +35,8 @@ class App extends React.Component {
       let result = await workoutsRes.json()
       this.setState({
         workoutsList: result
-      })
-  }
-
+      });
+  };
 
   renderRoutes() {
     return (
@@ -51,7 +50,7 @@ class App extends React.Component {
            ))}
         </>
     );
-}
+};
 
 
   render() {
@@ -62,8 +61,8 @@ class App extends React.Component {
         {this.renderRoutes()}
       </main>
       </ApiContext.Provider>
-    )
-  }
+    );
+  };
 };
 
 export default withRouter(App);

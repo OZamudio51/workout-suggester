@@ -14,8 +14,6 @@ class Workout extends React.Component {
 
     render() {
       const { workouts } = this.props;
-      const { bodypart } = this.props.match.params
-    console.log(bodypart)
         return (
         <section>
           <h2 style={{color: "white"}}>{workouts.workout_name}</h2>

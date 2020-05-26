@@ -9,14 +9,8 @@ class WorkoutList extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const { bodypart } = this.props.match.params
-    console.log(bodypart)
-  };
   
     render() {
-      const { bodypart } = this.props.match.params
-    console.log(bodypart)
     const workout = this.props.WorkoutList
         return (
         <div>

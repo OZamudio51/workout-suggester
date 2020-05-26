@@ -3,6 +3,7 @@ import './App.css';
 import Workout from './Workout';
 import BodyPartSelector from './BodyPartSelector';
 import ApiContext from './ApiContext';
+import BodyPartSelectorError from './BodyPartSelectorError';
 
 
 
@@ -42,7 +43,9 @@ class LandingPage extends React.Component {
             <header>
               <h1 className='workout-header'>Workout Suggester</h1>
             </header>
-            <BodyPartSelector updateBodypart={this.updateBodypart} />      
+          <BodyPartSelectorError>
+            <BodyPartSelector updateBodypart={this.updateBodypart} />
+          </BodyPartSelectorError>
 {
         this.state.bodypart ? 
         this.state.workouts.map((workoutDetail, index) => {
