@@ -3,15 +3,18 @@ import { Rate } from 'antd';
 import 'antd/dist/antd.css';
 import ApiContext from './ApiContext';
 import './Workout.css';
+
+// component for the workout
 class Workout extends React.Component {
   static defaultProps = {
     match: {
       params: {}
     }
-  }
+  };
 
   static contextType = ApiContext;
 
+  // renders the workout
     render() {
       const { workouts } = this.props;
         return (
@@ -22,7 +25,7 @@ class Workout extends React.Component {
           <label htmlFor='rating' style={{color: "white"}}>Rate this workout: </label>
           <Rate />
         </section>
-        )
+        );
     };
 };
 

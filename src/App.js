@@ -6,6 +6,8 @@ import LandingPage from './LandingPage';
 import ApiContext from './ApiContext';
 import config from './config';
 
+// paths for router
+
 const routes = [
   {
     path: '/',
@@ -15,7 +17,7 @@ const routes = [
     path: '/workout/bodypart',
     component: WorkoutList,
   }
-]
+];
 
 class App extends React.Component {
   constructor(props) {
@@ -23,13 +25,14 @@ class App extends React.Component {
     this.state = {
       workoutsList: []
     };
-
   };
 
+  //invokes the fetchWorkouts() function once the component mounts
   componentDidMount() {
     this.fetchWorkouts()
   };
 
+  //fetches the workouts
   fetchWorkouts =  async () => {
     let workoutsRes = await fetch(`${config.API_ENDPOINT}/api/workouts`)
       let result = await workoutsRes.json()
@@ -38,6 +41,7 @@ class App extends React.Component {
       });
   };
 
+  // maps over the routes related to the bodypart 
   renderRoutes() {
     return (
         <>
@@ -52,9 +56,8 @@ class App extends React.Component {
     );
 };
 
-
+  // renders the routes 
   render() {
-
     return (
      <ApiContext.Provider value={{workoutsList: this.state.workoutsList}}>
       <main className='App'>
