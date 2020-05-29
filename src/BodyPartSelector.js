@@ -20,7 +20,7 @@ class BodyPartSelector extends React.Component {
 
 
         if (this.state.bodypart === 'select') {
-            return alert('Please select a bodypart');
+            return alert('Please select a body part');
         }; 
         
         this.setState({
@@ -37,9 +37,9 @@ class BodyPartSelector extends React.Component {
         return (
         <div>
          <form htmlFor='Workout'>
-         <label htmlFor='Workout' style={{color: "white"}}>Working on: </label>
+         <label htmlFor='Workout' style={{color: "white"}}>Select a body part to get started: </label>
           <select title='Workout' className='body-selection' onChange={this.handleBodypartSubmit} defaultValue='Select-a-bodypart'>
-            <option value="Select-a-bodypart" disabled>Select a bodypart</option>
+            <option value="Select-a-bodypart" disabled>Select a body part</option>
             <option value='chest'>Chest</option>
             <option value='legs'>Legs</option>
             <option value='shoulders'>Shoulders</option>

@@ -30,6 +30,7 @@ class App extends React.Component {
   //invokes the fetchWorkouts() function once the component mounts
   componentDidMount() {
     this.fetchWorkouts()
+    this.props.history.push(`/`);
   };
 
   //fetches the workouts
