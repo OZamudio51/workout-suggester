@@ -1,8 +1,6 @@
 # Workout Suggester
 
 
-Link to live app: https://workout-suggester-ten-gilt.now.sh/
-
 ![Workout Suggester screenshot](workout-suggester-screenshot.PNG)
 
 
